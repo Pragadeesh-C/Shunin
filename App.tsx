@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import Login from 'container/Login'
+import {StyleSheet} from 'react-native';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import StackNavigator from 'navigation/StackNavigator';
 
 const App = () => {
   return (
-    <Login></Login>
-  )
-}
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
+  );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

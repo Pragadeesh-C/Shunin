@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074657175260",
+    "project_id": "shunin-5d1f7",
+    "storage_bucket": "shunin-5d1f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074657175260:android:b83b9433720ef2b4a5f619",
+        "android_client_info": {
+          "package_name": "com.shunin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx_2w3Rvw8gG9438-bb9hezMYqrKsrKXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,15 +1,36 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { SocialIcon } from '@rneui/themed';
-
+import auth from '@react-native-firebase/auth';
 
 const Login = () => {
   
   const [email,setemail]= useState('')
   const [pass,setpass]= useState('')
 
+  
+  const __doSignupUser = async () => {
+    try {
+      if (email.length > 0 && pass.length > 0) {
+        let response = await auth().signInWithEmailAndPassword(
+          email,
+          pass,
+        );
+        if (response && response.user) {
+          Alert.alert('Success ✅', 'Authenticated successfully');
+          console.log( 'Authenticated successfully')
+
+        }
+        // navigation.navigate('Home');
+      } else {
+        Alert.alert('Check', 'No inputs');
+      }
+    } catch (err) {
+      Alert.alert('Error', 'Check you inputs');
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SHUNIN</Text>

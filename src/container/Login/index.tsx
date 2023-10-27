@@ -1,27 +1,20 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { SocialIcon } from '@rneui/themed';
 
 
 const Login = () => {
+  
+  const [email,setemail]= useState('')
+  const [pass,setpass]= useState('')
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SHUNIN</Text>
       <Text style={styles.subtitle}>Management App</Text>
       <Text style={styles.subtitle2}>Login to your account</Text>
-      {/* <View style={styles.txtconatainer}>
-        <View style={styles.icon}>
-          <MaterialCommunityIcons name='email' color={"white"} size={30}></MaterialCommunityIcons>
-        </View>
-
-        <TextInput
-          placeholder="Enter your e-mail"
-          placeholderTextColor={'black'}
-          style={styles.txtinp}
-          textAlign="left"></TextInput>
-      </View> */}
       <View
         style={{
           flexDirection: 'row',
@@ -37,6 +30,8 @@ const Login = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
+          value={email}
+          onChangeText={text => setemail(text)}
         ></TextInput>
       </View>
       <View
@@ -55,6 +50,8 @@ const Login = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
+          value={pass}
+          onChangeText={text => setpass(text)}
 
         ></TextInput>
       </View>

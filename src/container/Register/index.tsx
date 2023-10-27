@@ -5,8 +5,14 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import { SocialIcon } from '@rneui/themed';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-
 const Register = () => {
+
+  const [username,setname]= useState('')
+  const [email,setemail]= useState('')
+  const [pass,setpass]= useState('')
+  const [cpass,setcpass]= useState('')
+
+
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('none');
@@ -36,6 +42,8 @@ const Register = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
+          value={username}
+          onChangeText={text => setname(text)}
         ></TextInput>
       </View>
       <View
@@ -54,7 +62,8 @@ const Register = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
-
+          value={email}
+          onChangeText={text => setemail(text)}
         ></TextInput>
       </View>
       <View
@@ -73,7 +82,8 @@ const Register = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
-
+          value={pass}
+          onChangeText={text => setpass(text)}
         ></TextInput>
       </View>
       <View
@@ -92,7 +102,8 @@ const Register = () => {
           placeholderTextColor={'black'}
           style={styles.txtinp}
           textAlign="left"
-
+          value={cpass}
+          onChangeText={text => setcpass(text)}
         ></TextInput>
       </View>
 
@@ -199,8 +210,6 @@ const styles = StyleSheet.create({
   },
   txtinp: {
     color: 'black', paddingLeft: 20
-    // backgroundColor: 'white',
-    // width:'%'
   },
   icon: {
     marginRight: 10

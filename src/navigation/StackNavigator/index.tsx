@@ -8,7 +8,7 @@ const StackNavigator = () => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={ProjectAdd} />
+      <Stack.Screen name="Login" component={Register} />
     </Stack.Navigator>
   );
 };
